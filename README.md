@@ -51,7 +51,6 @@ import os, shelve, pica
 
 def kb(path): return os.path.getsize(path)//1024
 
-
 print("=== shelve ===")
 for i in range(100):
     with shelve.open("shelve") as db:
