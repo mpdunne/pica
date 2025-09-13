@@ -1,6 +1,6 @@
 # Pica: Persistent key-value storage
 
-<img width="2176" height="544" alt="image" src="https://github.com/user-attachments/assets/125b4dc3-a3a7-4397-aa36-917e64f34951" />
+![alt text](https://github.com/user-attachments/assets/125b4dc3-a3a7-4397-aa36-917e64f34951? "Pica header")
 
 ## Overview
 
