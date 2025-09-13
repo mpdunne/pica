@@ -1,7 +1,7 @@
 from ._stash import Stash as _Stash
 
 __all__ = ["open", "Stash", "__version__"]
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 
 
 def open(path, *, wal: bool = True, read_only: bool = False) -> _Stash:

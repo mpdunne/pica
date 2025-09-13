@@ -6,11 +6,13 @@
 
 _Pica pica_: The Eurasian magpie. Known for collecting shiny things 
 
-The `pica` package is very similar to `shelve`, but uses SQLite behinds the scenes instead of DBM. This means that key-value pairs can be edited without the file size increasing, eliminating bloat.
-
-Installation: `pip install picapica`
+The `pica` package is very similar to `shelve` (see docs [here](https://docs.python.org/3/library/shelve.html)). Both enable key-value pairs to be stored on file without loading/saving entire dictionaries.
+ 
+However, `pica` uses SQLite behind the scenes instead of DBM. This means that values for existing keys can be edited as much as you like without file sizes increasing, eliminating bloat.
 
 ## Usage
+
+Installation: `pip install picapica`
 
 Basic usage:
 
@@ -26,6 +28,8 @@ with pica.open("data.sqlite") as db:
     print(len(db))
 
 ```
+
+This saves data key-value paris to the file `data.sqlite`.
 
 Unlike `shelve`, repeatedly updating key-value pairs does not necessarily increase the file size. However, the storage can still be optimised now and again! For this, use `db.vacuum`:
 
