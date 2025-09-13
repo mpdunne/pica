@@ -15,4 +15,4 @@ authors = [{ name = "Michael Dunne" }]
 requires-python = ">=3.9"
 
 [project.urls]
-Homepage = "https://github.com/mpdunne/picapica"
+Homepage = "https://github.com/mpdunne/pica"
