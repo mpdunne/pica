@@ -4,9 +4,9 @@
 
 ## Overview
 
-_Pica pica_: The Eurasian magpie. Known for collecting shiny things
+_Pica pica_: The Eurasian magpie. Known for collecting shiny things 
 
-Like `shelve`, but allows key-value pairs to be edited without causing file bloat. Works with any picklable objects!
+The `pica` package is very similar to `shelve`, but uses SQLite behinds the scenes instead of DBM. This means that key-value pairs can be edited without the file size increasing, eliminating bloat.
 
 Installation: `pip install picapica`
 
@@ -14,7 +14,7 @@ Installation: `pip install picapica`
 
 Basic usage:
 
-```
+```python
 import pica
 
 with pica.open("data.sqlite") as db:
@@ -29,7 +29,7 @@ with pica.open("data.sqlite") as db:
 
 Unlike `shelve`, repeatedly updating key-value pairs does not necessarily increase the file size. However, the storage can still be optimised now and again! For this, use `db.vacuum`:
 
-```
+```python
 with pica.open("data.sqlite") as db:
   db.vacuum()
 ```
